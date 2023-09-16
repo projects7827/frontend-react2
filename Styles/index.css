@@ -202,6 +202,10 @@ body {
 .detailsContainer tr:hover {
     border-bottom: 1px solid rgba(200, 200, 200)
 }
+.detailsContainer tr:nth-child(even){
+    background: rgba(240, 240, 240)
+
+}
 
 
 
