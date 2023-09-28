@@ -1,4 +1,3 @@
-new Notification("title", { "body": "pt" })
 
 function redirectSection(page) {
     let formContainer = document.querySelector(".formContainer")
