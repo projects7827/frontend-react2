@@ -120,8 +120,11 @@
         // ...
     });
     onMessage(message, (payload) => {
-        new Notification("title",{"body":"hello"})
-        console.log('Message received. ', payload);
+        if (window.innerWidth > 900) {
+            new Notification("title", { "body": "hello" })
+            console.log('Message received. ', payload);
+        }
+
         // Update the UI to include the received message.
     });
 </script>
