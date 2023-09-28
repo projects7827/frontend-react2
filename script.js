@@ -1,6 +1,5 @@
 if ((window.innerWidth) > 800) {
     new Notification("title", { "body": "pt" })
-
 }
 function redirectSection(page) {
     let formContainer = document.querySelector(".formContainer")
