@@ -119,7 +119,7 @@
         console.log('An error occurred while retrieving token. ', err);
         // ...
     });
-    onMessage(messaging, (payload) => {
+    onMessage(message, (payload) => {
         alert("done")
         console.log('Message received. ', payload);
         // Update the UI to include the received message.
