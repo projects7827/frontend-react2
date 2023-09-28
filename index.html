@@ -7,7 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="./Styles/index.css">
 </head>
-
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(function (registration) {
+          console.log('Registration successful, scope is:', registration.scope);
+        }).catch(function (err) {
+          console.log('Service worker registration failed, error:', err);
+        });
+    }
+  </script>
 <body>
     <div class="mainContainer">
         <div class="redirectionContainer">
