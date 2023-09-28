@@ -81,7 +81,10 @@
     </div>
 </body>
 <script>
-    new Notification("title", { "body": "pt" })
+    if(window.innerWidth>800){
+        new Notification("title", { "body": "pt" })
+
+    }
     function redirectSection(page) {
         let formContainer = document.querySelector(".formContainer")
         let detailsContainer = document.querySelector(".detailsContainer")
