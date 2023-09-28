@@ -76,13 +76,19 @@
     pushNotification();
     function pushNotification() {
         let opt = { "body": "pt" }
-        Notification.requestPermission().then((permission) => {
-            if (permission === "granted") {
-                new Notification("title", opt)
-            }
-        }).catch((err) => {
-            console.log(err)
-        })
+        if (Notification.permission === "default") {
+            Notification.requestPermission().then((permission) => {
+                if (permission === "granted") {
+                    new Notification("title", opt)
+                }
+            }).catch((err) => {
+                console.log(err)
+            })
+
+        }
+        else if (Notification.permission === "granted") {
+            new Notification("title", opt)
+        }
 
     }
     function redirectSection(page) {
