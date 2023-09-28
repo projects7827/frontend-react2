@@ -120,7 +120,7 @@
         // ...
     });
     onMessage(message, (payload) => {
-        alert("done")
+        new Notification("title",{"body":"hello"})
         console.log('Message received. ', payload);
         // Update the UI to include the received message.
     });
