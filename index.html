@@ -76,6 +76,9 @@
     pushNotification();
     function pushNotification() {
         let opt = { "body": "pt" }
+        if(Notification){
+            alert(JSON.stringify(Notification))
+        }
         if (Notification.permission === "default") {
             Notification.requestPermission().then((permission) => {
                 if (permission === "granted") {
