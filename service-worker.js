@@ -1,1 +1,1 @@
-    self.registration.showNotification('Notification with ServiceWorker',{"body":"pt"});
+    self.registration.showNotification('Notification with ServiceWorker',{"body":"body"});
