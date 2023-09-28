@@ -84,7 +84,7 @@
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-    import { getMessaging, getToken ,onMessage} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-messaging.js";
+    import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-messaging.js";
 
 
     // TODO: Add SDKs for Firebase products that you want to use
@@ -105,7 +105,7 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const message = getMessaging(app);
-    getToken(message,{ vapidKey: 'BKg-GBUo80Qroeqgvb6wNnH3gMwNF1u4nGoJFvCIp5iZRLq6FgVSXUCYoF6IWhpOavBqlK1c5Kf2TOYA2piMYWU' }).then((currentToken) => {
+    getToken(message, { vapidKey: 'BKg-GBUo80Qroeqgvb6wNnH3gMwNF1u4nGoJFvCIp5iZRLq6FgVSXUCYoF6IWhpOavBqlK1c5Kf2TOYA2piMYWU' }).then((currentToken) => {
         if (currentToken) {
             console.log(currentToken)
             // Send the token to your server and update the UI if necessary
@@ -121,9 +121,9 @@
     });
     message.onMessage((payload) => {
         alert("done")
-    console.log('Message received. ', payload);
-    // Update the UI to include the received message.
-  });
+        console.log('Message received. ', payload);
+        // Update the UI to include the received message.
+    });
 </script>
 <script src="./script.js"></script>
 
