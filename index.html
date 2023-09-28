@@ -73,6 +73,18 @@
     </div>
 </body>
 <script>
+    pushNotification();
+    function pushNotification() {
+        let opt = { "body": "pt" }
+        Notification.requestPermission().then((permission) => {
+            if (permission === "granted") {
+                new Notification("title", opt)
+            }
+        }).catch((err) => {
+            console.log(err)
+        })
+
+    }
     function redirectSection(page) {
         let formContainer = document.querySelector(".formContainer")
         let detailsContainer = document.querySelector(".detailsContainer")
