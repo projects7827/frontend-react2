@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./Styles/index.css">
 </head>
 <script>
-    navigator.serviceWorker.register('./service-worker.js');
+    navigator.serviceWorker.register('service-worker.js').then((data)=>{
+        console.lof(data)
+    })
 
 </script>
 
