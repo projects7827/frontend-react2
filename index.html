@@ -105,7 +105,7 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const message = getMessaging(app);
-    getToken({ vapidKey: '<YOUR_PUBLIC_VAPID_KEY_HERE>' }).then((currentToken) => {
+    getToken({ vapidKey: 'BKg-GBUo80Qroeqgvb6wNnH3gMwNF1u4nGoJFvCIp5iZRLq6FgVSXUCYoF6IWhpOavBqlK1c5Kf2TOYA2piMYWU' }).then((currentToken) => {
         if (currentToken) {
             console.log(token)
             // Send the token to your server and update the UI if necessary
