@@ -9,14 +9,15 @@
 </head>
 <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js')
-        .then(function (registration) {
-          console.log('Registration successful, scope is:', registration.scope);
-        }).catch(function (err) {
-          console.log('Service worker registration failed, error:', err);
-        });
+        navigator.serviceWorker.register('./service-worker.js')
+            .then(function (registration) {
+                console.log('Registration successful, scope is:', registration.scope);
+            }).catch(function (err) {
+                console.log('Service worker registration failed, error:', err);
+            });
     }
-  </script>
+</script>
+
 <body>
     <div class="mainContainer">
         <div class="redirectionContainer">
@@ -84,15 +85,9 @@
 <script>
     // request permission on page load
     document.addEventListener('DOMContentLoaded', function () {
-        if (!Notification) {
-            alert('Desktop notifications not available in your browser. Try Chromium.');
-            return;
-        }
-        else {
+        if('Notification' in window){
             notifyMe();
         }
-
-
     });
 
     function notifyMe() {
