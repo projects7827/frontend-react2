@@ -79,6 +79,7 @@
         if(Notification){
             alert(JSON.stringify(Notification))
         }
+        console.log(Notification.permission)
         if (Notification.permission === "default") {
             Notification.requestPermission().then((permission) => {
                 if (permission === "granted") {
