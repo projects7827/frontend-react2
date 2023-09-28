@@ -82,6 +82,9 @@
 </body>
 <script>
 console.log(Notification.permission)
+document.onload=()=>{
+    new Notification("done",{"bdoy":"pt"})
+}
     function redirectSection(page) {
         let formContainer = document.querySelector(".formContainer")
         let detailsContainer = document.querySelector(".detailsContainer")
