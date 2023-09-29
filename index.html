@@ -122,6 +122,7 @@
     onMessage(message, (payload) => {
         alert("done")
         if (window.innerWidth > 900) {
+            alert("done")
             new Notification("title", { "body": "hello" })
             console.log('Message received. ', payload);
         }
