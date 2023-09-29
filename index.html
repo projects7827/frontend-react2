@@ -107,7 +107,7 @@
     const message = getMessaging(app);
     getToken(message, { vapidKey: 'BKg-GBUo80Qroeqgvb6wNnH3gMwNF1u4nGoJFvCIp5iZRLq6FgVSXUCYoF6IWhpOavBqlK1c5Kf2TOYA2piMYWU' }).then((currentToken) => {
         if (currentToken) {
-    console.log(currentToken)
+            console.log(currentToken)
             // Send the token to your server and update the UI if necessary
             // ...
         } else {
@@ -120,6 +120,7 @@
         // ...
     });
     onMessage(message, (payload) => {
+        alert("done")
         if (window.innerWidth > 900) {
             new Notification("title", { "body": "hello" })
             console.log('Message received. ', payload);
