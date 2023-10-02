@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Styles/index.css">
 </head>
 <script>
-    navigator.serviceWorker.register('./firebase-messaging-sw.js').then((data) => {
+    navigator.serviceWorker.register('./firebase-messaging-sw.js',{"type":"module"}).then((data) => {
         console.log(data)
     }).catch((err) => {
         console.log(err)
