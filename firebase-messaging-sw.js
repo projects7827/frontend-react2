@@ -33,9 +33,9 @@ messaging.onBackgroundMessage(function (payload) {
             clients.openWindow("https://www.ockypocky.com/")
         )
     });
-    console.log(count)
-    if (count === 2) {
-        count = 0;
-        self.registration.showNotification(notificationTitle, notificationOptions);
-    }
+    // console.log(count)
+    // if (count === 2) {
+    //     count = 0;
+    //     self.registration.showNotification(notificationTitle, notificationOptions);
+    // }
 });
