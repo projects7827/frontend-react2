@@ -26,11 +26,11 @@ messaging.onBackgroundMessage(function (payload) {
     };
     self.addEventListener("notificationclick", (event) => {
         self.location.href = 'https://ockypocky.com/'
-        event.notification.close();
         event.waitUntil(
             clients.openWindow("https://www.ockypocky.com/")
         )
     });
-    self.registration.hideNotification();
+    payload.notification.close();
+
     self.registration.showNotification(notificationTitle, notificationOptions);
 });
