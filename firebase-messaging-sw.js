@@ -14,26 +14,26 @@ const firebaseConfig = {
     measurementId: "G-4CHHHCPN48"
 };
 
-firebase.initializeApp(firebaseConfig);
-// // Retrieve firebase messaging
-// const messaging = firebase.messaging();
-// console.log(firebase.onBackgroundMessage)
-// let count = 0
+let app = firebase.initializeApp(firebaseConfig);
+// Retrieve firebase messaging
+const messaging = firebase.messaging(app);
+console.log(firebase.onBackgroundMessage)
+let count = 0
 
-// messaging.onBackgroundMessage(function (payload) {
-//     count++;
-//     console.log("Received background message ", payload);
-//     const notificationTitle = 'pt';
-//     const notificationOptions = {
-//         body: "pt",
-//     };
+messaging.onBackgroundMessage(function (payload) {
+    count++;
+    console.log("Received background message ", payload);
+    const notificationTitle = 'pt';
+    const notificationOptions = {
+        body: "pt",
+    };
 
-//     self.addEventListener("notificationclick", (event) => {
-//         event.notification.close();
-//         event.waitUntil(
-//             clients.openWindow("https://www.ockypocky.com/")
-//         )
-//     });
-//     // self.registration.showNotification(notificationTitle, notificationOptions);
+    self.addEventListener("notificationclick", (event) => {
+        event.notification.close();
+        event.waitUntil(
+            clients.openWindow("https://www.ockypocky.com/")
+        )
+    });
+    // self.registration.showNotification(notificationTitle, notificationOptions);
 
-// });
+});
