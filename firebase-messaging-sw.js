@@ -3,18 +3,18 @@ importScripts("https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"
 importScripts("https://www.gstatic.com/firebasejs/10.4.0/firebase-messaging-compat.js");
 
 
-// // Initialize the Firebase app in the service worker by passing the generated config
-// const firebaseConfig = {
-//     apiKey: "AIzaSyDkeQhIjKjXl6ruJwZ3lOG0LwSa5-T9qLs",
-//     authDomain: "prateek-5bd13.firebaseapp.com",
-//     projectId: "prateek-5bd13",
-//     storageBucket: "prateek-5bd13.appspot.com",
-//     messagingSenderId: "550542718433",
-//     appId: "1:550542718433:web:1d980152172f1ba987cea0",
-//     measurementId: "G-4CHHHCPN48"
-// };
+// Initialize the Firebase app in the service worker by passing the generated config
+const firebaseConfig = {
+    apiKey: "AIzaSyDkeQhIjKjXl6ruJwZ3lOG0LwSa5-T9qLs",
+    authDomain: "prateek-5bd13.firebaseapp.com",
+    projectId: "prateek-5bd13",
+    storageBucket: "prateek-5bd13.appspot.com",
+    messagingSenderId: "550542718433",
+    appId: "1:550542718433:web:1d980152172f1ba987cea0",
+    measurementId: "G-4CHHHCPN48"
+};
 
-// let app = firebase.initializeApp(firebaseConfig);
+let app = firebase.initializeApp(firebaseConfig);
 // // Retrieve firebase messaging
 // const messaging = firebase.messaging();
 // console.log(firebase.onBackgroundMessage)
