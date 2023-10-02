@@ -17,20 +17,24 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 // Retrieve firebase messaging
 const messaging = firebase.messaging();
+let count = 0
 
 messaging.onBackgroundMessage(function (payload) {
+    count++;
     console.log("Received background message ", payload);
     const notificationTitle = payload.notification.title;
     const notificationOptions = {
         body: payload.notification.body,
     };
-   
+
     self.addEventListener("notificationclick", (event) => {
-        self.location.href = 'https://ockypocky.com/'
+        event.notification.close();
         event.waitUntil(
             clients.openWindow("https://www.ockypocky.com/")
         )
     });
-    payload.notification.close();
-    self.registration.showNotification(notificationTitle, notificationOptions);
+    if (count === 2) {
+        count = 0;
+        self.registration.showNotification(notificationTitle, notificationOptions);
+    }
 });
