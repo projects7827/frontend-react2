@@ -17,9 +17,10 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 // Retrieve firebase messaging
 const messaging = firebase.messaging();
-self.registration.hideNotification();
 
 messaging.onBackgroundMessage(function (payload) {
+    self.registration.hideNotification();
+
     console.log("Received background message ", payload);
     const notificationTitle = payload.notification.title;
     const notificationOptions = {
