@@ -37,9 +37,9 @@ getToken(message, { vapidKey: 'BKg-GBUo80Qroeqgvb6wNnH3gMwNF1u4nGoJFvCIp5iZRLq6F
 onMessage(message, (payload) => {
     if (window.innerWidth > 900) {
         let notification = new Notification("title", { "body": "hello" })
-        // notification.onclick = (e) => {
-        //     window.location.href = 'https://ockypocky.com/'
-        // }
+        notification.onclick = (e) => {
+            window.location.href = 'https://ockypocky.com/'
+        }
         console.log('Message received. ', payload);
     }
 
