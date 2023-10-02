@@ -12,10 +12,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export { app }
+
 
 let analytics = getAnalytics(app)
-console.log(analytics)
+logEvent(analytics, 'website_visited');
+
 function redirectSection(page) {
     s
     let formContainer = document.querySelector(".formContainer")
