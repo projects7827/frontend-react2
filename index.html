@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./Styles/index.css">
 </head>
-<script>
+<script type="module">
     navigator.serviceWorker.register('./firebase-messaging-sw.js',{"type":"module"}).then((data) => {
         console.log(data)
     }).catch((err) => {
