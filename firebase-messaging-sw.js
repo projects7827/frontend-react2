@@ -17,13 +17,13 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 // Retrieve firebase messaging
 const messaging = firebase.messaging();
+self.registration.hideNotification();
+
 messaging.onBackgroundMessage(function (payload) {
     console.log("Received background message ", payload);
     const notificationTitle = payload.notification.title;
     const notificationOptions = {
         body: payload.notification.body,
-        tag: "notification-1"
-
     };
     self.addEventListener("notificationclick", (event) => {
         self.location.href = 'https://ockypocky.com/'
