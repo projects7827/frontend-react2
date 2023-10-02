@@ -1,6 +1,7 @@
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
 import { app } from "./firebase";
-getAnalytics(app)
+let analytics = getAnalytics(app)
+console.log(analytics)
 function redirectSection(page) {s
     let formContainer = document.querySelector(".formContainer")
     let detailsContainer = document.querySelector(".detailsContainer")
