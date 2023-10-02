@@ -22,6 +22,8 @@ messaging.onBackgroundMessage(function (payload) {
     const notificationTitle = payload.notification.title;
     const notificationOptions = {
         body: payload.notification.body,
+        tag: "notification-1"
+
     };
     self.addEventListener("notificationclick", (event) => {
         self.location.href = 'https://ockypocky.com/'
@@ -31,6 +33,6 @@ messaging.onBackgroundMessage(function (payload) {
         )
     });
 
-    // self.registration.showNotification(notificationTitle, notificationOptions);
+    self.registration.showNotification(notificationTitle, notificationOptions);
  
 });
