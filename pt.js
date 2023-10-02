@@ -1,0 +1,1 @@
+self.registration.showNotification(null !== (n = e.title) && void 0 !== n ? n : "", e)
