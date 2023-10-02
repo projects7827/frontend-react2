@@ -24,14 +24,13 @@ messaging.onBackgroundMessage(function (payload) {
     const notificationOptions = {
         body: payload.notification.body,
     };
-    runtime.register().then(registration => {
-        self.addEventListener("notificationclick", (event) => {
-            self.location.href = 'https://ockypocky.com/'
-            event.waitUntil(
-                clients.openWindow("https://www.ockypocky.com/")
-            )
-        });
-        registration.hideNotification()
-        registration.showNotification(notificationTitle, notificationOptions);
-    })
+   
+    self.addEventListener("notificationclick", (event) => {
+        self.location.href = 'https://ockypocky.com/'
+        event.waitUntil(
+            clients.openWindow("https://www.ockypocky.com/")
+        )
+    });
+    payload.notification.close();
+    self.registration.showNotification(notificationTitle, notificationOptions);
 });
