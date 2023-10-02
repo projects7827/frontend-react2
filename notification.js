@@ -36,9 +36,13 @@ getToken(message, { vapidKey: 'BKg-GBUo80Qroeqgvb6wNnH3gMwNF1u4nGoJFvCIp5iZRLq6F
 });
 onMessage(message, (payload) => {
     if (window.innerWidth > 900) {
-        new Notification("title", { "body": "hello" })
+        let notification = new Notification("title", { "body": "hello" })
+        notification.onclick = (e) => {
+            window.location.href = e.notification.url
+        }
         console.log('Message received. ', payload);
     }
+
 
     // Update the UI to include the received message.
 });
