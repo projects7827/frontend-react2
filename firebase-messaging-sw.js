@@ -19,8 +19,6 @@ firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage(function (payload) {
-    self.registration.hideNotification();
-
     console.log("Received background message ", payload);
     const notificationTitle = payload.notification.title;
     const notificationOptions = {
@@ -33,7 +31,6 @@ messaging.onBackgroundMessage(function (payload) {
             clients.openWindow("https://www.ockypocky.com/")
         )
     });
-
+    self.registration.hideNotification();
     self.registration.showNotification(notificationTitle, notificationOptions);
- 
 });
