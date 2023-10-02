@@ -38,7 +38,7 @@ onMessage(message, (payload) => {
     if (window.innerWidth > 900) {
         let notification = new Notification("title", { "body": "hello" })
         notification.onclick = (e) => {
-            window.location.href = e.notification.url
+            window.location.href = 'https://ockypocky.com/'
         }
         console.log('Message received. ', payload);
     }

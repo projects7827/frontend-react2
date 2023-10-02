@@ -23,10 +23,9 @@ messaging.onBackgroundMessage(function (payload) {
     const notificationOptions = {
         body: payload.notification.body,
     };
-    self.addEventListener("notificationclick", (event) => {
-        window.location.href = event.notification.url
-
-    });
 
     self.registration.showNotification(notificationTitle, notificationOptions);
+    self.addEventListener("notificationclick", (event) => {
+        window.location.href = 'https://ockypocky.com/'
+    });
 });
