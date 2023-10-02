@@ -25,7 +25,7 @@ messaging.onBackgroundMessage(function (payload) {
     };
 
     self.registration.showNotification(notificationTitle, notificationOptions);
-    self.addEventListener("notificationclick", (event) => {
-        self.location.href = 'https://ockypocky.com/'
-    });
+    // self.addEventListener("notificationclick", (event) => {
+    //     self.location.href = 'https://ockypocky.com/'
+    // });
 });
