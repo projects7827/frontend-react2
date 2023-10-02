@@ -1,4 +1,4 @@
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+import { getAnalytics,logEvent } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 const firebaseConfig = {
     apiKey: "AIzaSyDkeQhIjKjXl6ruJwZ3lOG0LwSa5-T9qLs",
