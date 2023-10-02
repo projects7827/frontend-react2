@@ -17,6 +17,7 @@ const firebaseConfig = {
 let app = firebase.initializeApp(firebaseConfig);
 // // Retrieve firebase messaging
 const messaging = firebase.messaging();
+console.log(firebase)
 // console.log(firebase.onBackgroundMessage)
 // let count = 0
 
