@@ -22,9 +22,9 @@ let count = 0
 messaging.onBackgroundMessage(function (payload) {
     count++;
     console.log("Received background message ", payload);
-    const notificationTitle = payload.notification.title;
+    const notificationTitle = 'pt';
     const notificationOptions = {
-        body: payload.notification.body,
+        body: "pt",
     };
 
     self.addEventListener("notificationclick", (event) => {
@@ -33,9 +33,6 @@ messaging.onBackgroundMessage(function (payload) {
             clients.openWindow("https://www.ockypocky.com/")
         )
     });
-    // console.log(count)
-    // if (count === 2) {
-    //     count = 0;
-    //     self.registration.showNotification(notificationTitle, notificationOptions);
-    // }
+    self.registration.showNotification(notificationTitle, notificationOptions);
+
 });
