@@ -7,10 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="./Styles/index.css">
 </head>
-<script type="module">
-  let worker =   new Worker('./firebase-messaging-sw.js', { "type": "module" })
-console.log(worker)
-</script>
 
 <body>
     <div class="mainContainer">
@@ -43,7 +39,6 @@ console.log(worker)
             <div class="formHeading">City</div>
             <input type="text" class="formInput" id="city" />
             <span class="errMsg" id="cityErr"></span>
-
             <div class="formHeading">Gender</div>
             <div class="inputContainer">
                 <label for="male" class="formLabel">
@@ -57,17 +52,12 @@ console.log(worker)
                 </label>
             </div>
             <span class="errMsg" id="genderErr"></span>
-
             <div class="formHeading">Date Of Birth</div>
             <input type="date" class="formInput" id="dob" />
             <span class="errMsg" id="dobErr"></span>
-
             <div class="formHeading">Age</div>
             <input type="text" class="formInput" id="age" />
             <span class="errMsg" id="ageErr"></span>
-
-
-
             <button class="formSubmit" onclick="submitForm()">Submit</button>
         </div>
         <div class="detailsContainer">
@@ -77,7 +67,6 @@ console.log(worker)
     </div>
 </body>
 
-<script type="module" src="./notification.js"></script>
-<script src="./script.js" type="module"></script>
+<script src="./script.js"></script>
 
 </html>
